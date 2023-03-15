@@ -46,3 +46,16 @@ public              v                   v               v                       
         Interface: represente le template ou le plan que doit suivre une classe 
                     Declaration : interface NomDel'interface (toujours en pascal case).
                                 Il ne contient que des méthodes abstraites (bien qu'on ne met pas le mot abstract dans les interfaces)
+
+
+### Java Enterprise Edition (J2EE)
+    
+    Pour que ça marche, on a besoin de Marvel+Appache Tomcat+jdk
+        
+
+    C'est une spéficité de java qui permet de faire des applis web.
+    Elle est basée sur le MVC 
+    En java le controller est appelé Servlet et le retour (vue) envoyé par le controller Java Server Pages (JSP)
+
+    Le conteneur: Permet d'exécuter le code java compilé
+         
