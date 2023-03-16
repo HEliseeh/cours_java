@@ -59,3 +59,15 @@ public              v                   v               v                       
 
     Le conteneur: Permet d'exécuter le code java compilé
          
+
+# Le POM: 
+    C'est un modèle d'objet de projet ou POM est l'unité de travail fondamentale de Maven. Il s'agit d'un fichier XML qui contient des informations sur le projet et les détails de configuration utilisés par Maven pour construire le projet. Il contient des valeurs par défaut pour la plupart des projets.
+    
+    Il contient quelques informations obligatoire:
+        -project: c'est la racine du projet
+        -modelVersion: doit être défini sur 4.0.0
+        -groupId: c'est le nom du package (l'identifiant du groupe du projet)
+        -artifacatId: l'identifiant de l'artefact (projet)
+        -version: la version de l'artefact sous le groupe spécifié
+    
+    Après chaque modification il faut exécuter la commande mvn clean package
