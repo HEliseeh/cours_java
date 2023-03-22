@@ -71,3 +71,33 @@ public              v                   v               v                       
         -version: la version de l'artefact sous le groupe spécifié
     
     Après chaque modification il faut exécuter la commande mvn clean package
+
+
+### Les objets implicites
+    Ces objets sont créés par le conteneur Web et sont disponible pour toutes les pages jsp.  Il y en a 9:
+        out, request, response, config, application, session, pageContext, page, exception
+
+    Pour passer un attribut de la servle a la vue
+        Dans la servlet: request.setAttribute("nomDeLaVariable","laValeur")
+        Dans la vue: String NomVariable = (String (casting)) reqeust.getAttribut("nomDeLaVariable")
+
+### Les expressions de language
+    -Les directives jsp: 
+        on les mets dans le <%@ %> . C'est une déclaration dans laquelle on met du code java
+        Ex: include, pageEncoding.. il y en existe beaucoup
+    -Les balises jsp: 
+        on les mets dans le <% %> balises dans lequel on met le code source java
+    
+    La syntaxe: ${"NomDeLaVariable"} dans la vue affiche la variable correspondante
+
+### Recupération des l'élements de l'url
+    Syntax: ${param.nomDuParametre} 
+        ou
+        Dans la vue: String NomVariable = (String (casting)) reqeust.getParameter("nomDeLaVariable")
+
+### Redirection en java
+    req.SendRedirect("PageDeDestination")
+
+### JSTL (Java server page Standard Tag Library)
+    Représente un ensemble de balises pour simplifier le développement jsp.
+    importation: <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
