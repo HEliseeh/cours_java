@@ -48,7 +48,7 @@ public              v                   v               v                       
                                 Il ne contient que des méthodes abstraites (bien qu'on ne met pas le mot abstract dans les interfaces)
 
 
-### Java Enterprise Edition (J2EE)
+# Java Enterprise Edition (J2EE)
     
     Pour que ça marche, on a besoin de Marvel+Appache Tomcat+jdk
         
@@ -60,7 +60,7 @@ public              v                   v               v                       
     Le conteneur: Permet d'exécuter le code java compilé
          
 
-# Le POM: 
+## Le POM: 
     C'est un modèle d'objet de projet ou POM est l'unité de travail fondamentale de Maven. Il s'agit d'un fichier XML qui contient des informations sur le projet et les détails de configuration utilisés par Maven pour construire le projet. Il contient des valeurs par défaut pour la plupart des projets.
     
     Il contient quelques informations obligatoire:
@@ -73,7 +73,7 @@ public              v                   v               v                       
     Après chaque modification il faut exécuter la commande mvn clean package
 
 
-### Les objets implicites
+## Les objets implicites
     Ces objets sont créés par le conteneur Web et sont disponible pour toutes les pages jsp.  Il y en a 9:
         out, request, response, config, application, session, pageContext, page, exception
 
@@ -81,7 +81,7 @@ public              v                   v               v                       
         Dans la servlet: request.setAttribute("nomDeLaVariable","laValeur")
         Dans la vue: String NomVariable = (String (casting)) reqeust.getAttribut("nomDeLaVariable")
 
-### Les expressions de language
+## Les expressions de language
     -Les directives jsp: 
         on les mets dans le <%@ %> . C'est une déclaration dans laquelle on met du code java
         Ex: include, pageEncoding.. il y en existe beaucoup
@@ -90,19 +90,19 @@ public              v                   v               v                       
     
     La syntaxe: ${"NomDeLaVariable"} dans la vue affiche la variable correspondante
 
-### Recupération des l'élements de l'url
+## Recupération des l'élements de l'url
     Syntax: ${param.nomDuParametre} 
         ou
         Dans la vue: String NomVariable = (String (casting)) reqeust.getParameter("nomDeLaVariable")
 
-### Redirection en java
+## Redirection en java
     req.SendRedirect("PageDeDestination")
 
-### JSTL (Java server page Standard Tag Library)
+## JSTL (Java server page Standard Tag Library)
     Représente un ensemble de balises pour simplifier le développement jsp.
     importation: <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 
-### Connection a la base de donnée avec java
+## Connection a la base de donnée avec java
 	
     Cinq étapes importantes
 	    -Enrégistrer la BDD de connection
@@ -120,4 +120,4 @@ public              v                   v               v                       
 	La classe .forName
     -La DAO: L'Objet d'Accès aux Données
 
-### Spring boot
+# SPRING BOOT
