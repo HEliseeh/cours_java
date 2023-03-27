@@ -121,3 +121,35 @@ public              v                   v               v                       
     -La DAO: L'Objet d'Accès aux Données
 
 # SPRING BOOT
+    En java le code est en .jar
+    -Inversion de controle , injection de dépendance à l'intérieur du code grâce au pom.xml
+    -Programation objet aspect(paradigme de programation qui permet de traiter séparement les préoccupations)
+    -Couche d'abstraction
+
+## Les annotations
+    -Métadonnées incluses dans le code source
+    -Utilisées avec quasiment tous les types d'entités
+    -Précédé du caractère @
+
+### Niveau de retention
+    -Retention Policy.class: l'anotation est enrégistré dans le code 
+    -Retention Policy.Rumtime: stocké et enrégistré dans la mémoire JVM lors de la compilation
+    -Retention Policy.SOURCE: perdue aprés la compilation (ex: @getter @override)
+### Cible et annotation
+    -ElementType.TYPE: s'enploi sur une classe, une interface, une annotation ou un type énuméré 
+    -ElementType.FIELD : s'enploi sur un attribut ou sur une constante d'un type énuméré
+    -ElementType.METHOD: s'enploi sur une méthode (abstraite ou non, native ou non, statique ou non)
+    -ElementType.CONSTRUCTOR: s'enploi sur un construteur
+    -ElementType.LOCAL_VARIABLE: s'enploi sur une déclaration de variable locale a une méthode
+    -ElementType.ANNOTATION_TYPE: s'enploi sur une autre annotation
+    -ElementType.PACKAGE: s'enploi sur une declaration de paquetage
+    -ElementType.PARAMETER: s'enploi sur une déclaration de type générique
+    -ElementType.MODULE: s'enploi sur une définition de module
+    --ElementType.TYPE_USE: s'enploi en mode extends
+
+### Les types d'annotation
+    - Les annotations standard: elles n'ont pa d'effets directs sur les entités qu'elles concernent (ex: @Deprecated, @Override, @SuppressWarnings)
+    - Les annotations communes:
+        - @Generated: permet de savoir que le code qui est en dessus a été généré par le framework
+        - @Resource: definit une ressource requise par une classe. Par ex un composant Java EE de type EJB ou JMS 
+        @Resource(name="MaQueue", type="javax.jms.Queue", shareable=false, auth...)
