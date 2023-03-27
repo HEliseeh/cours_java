@@ -101,3 +101,21 @@ public              v                   v               v                       
 ### JSTL (Java server page Standard Tag Library)
     Représente un ensemble de balises pour simplifier le développement jsp.
     importation: <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+
+### Connection a la base de donnée avec java
+	
+    Cinq étapes importantes
+	    -Enrégistrer la BDD de connection
+
+            class.forName("com.mysql.jdbc.Driver")
+
+	    -Récupérer l'objet de connection
+            On utilise la méthode getConnection
+            connection = DriverManager.getConnection("dsn", "Dbusername", "password")
+                dsn: Data Source Name par exemple "jdbc:mysql://localhost:3306/user_db"
+	    -Créer la requête
+	    -Exécuter la requête
+	    -Fermer la connexion
+
+	La classe .forName
+    -La DAO: L'Objet d'Accès aux Données
