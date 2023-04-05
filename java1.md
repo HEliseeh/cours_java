@@ -121,6 +121,7 @@ public              v                   v               v                       
     -La DAO: L'Objet d'Accès aux Données
 
 # SPRING BOOT
+    (Si on a pas les extensions vscode ou un IDE java on peut passer par start.spring.io)
     En java le code est en .jar
     -Inversion de controle , injection de dépendance à l'intérieur du code grâce au pom.xml
     -Programation objet aspect(paradigme de programation qui permet de traiter séparement les préoccupations)
@@ -153,3 +154,17 @@ public              v                   v               v                       
         - @Generated: permet de savoir que le code qui est en dessus a été généré par le framework
         - @Resource: definit une ressource requise par une classe. Par ex un composant Java EE de type EJB ou JMS 
         @Resource(name="MaQueue", type="javax.jms.Queue", shareable=false, auth...)
+
+## Spring boot : Mise en place spring (configuration, pom.xml)
+
+### Configuration
+
+    Les etapes de la mise en place du projet
+        -start.spring.io : télécharger le projet
+        -commande: .\mvnw.cmd
+        -commande: mvn clean
+        -commande: mvn install
+        -commande: mvn spring-boot:run qui envoi le serveur spring
+
+### Pom.xml
+    
